@@ -1,1 +1,72 @@
 
+#This code is an example for a practice
+
+test> use tienda
+switched to db tienda
+tienda> db.productos.insertOne({producto:"libro1",precio:9.99})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67491fce26998bf6350d8190')
+}
+tienda> db.productos.find()
+[
+  {
+    _id: ObjectId('67491fce26998bf6350d8190'),
+    producto: 'libro1',
+    precio: 9.99
+  }
+]
+tienda> db.productos.find().pretty()
+[
+  {
+    _id: ObjectId('67491fce26998bf6350d8190'),
+    producto: 'libro1',
+    precio: 9.99
+  }
+]
+tienda> db.productos.insertOne({producto:"libro2",precio:12.99,descripcion:"Un muy buen libro"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6749207a26998bf6350d8191')
+}
+tienda> db.productos.find().pretty()
+[
+  {
+    _id: ObjectId('67491fce26998bf6350d8190'),
+    producto: 'libro1',
+    precio: 9.99
+  },
+  {
+    _id: ObjectId('6749207a26998bf6350d8191'),
+    producto: 'libro2',
+    precio: 12.99,
+    descripcion: 'Un muy buen libro'
+  }
+]
+tienda> db.productos.insertOne({producto:"libro2",precio:12.99,descripcion:"Un muy buen libro",detalles:{tapa:"dura",paginas:300}})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6749214126998bf6350d8192')
+}
+tienda> db.productos.find().pretty()
+[
+  {
+    _id: ObjectId('67491fce26998bf6350d8190'),
+    producto: 'libro1',
+    precio: 9.99
+  },
+  {
+    _id: ObjectId('6749207a26998bf6350d8191'),
+    producto: 'libro2',
+    precio: 12.99,
+    descripcion: 'Un muy buen libro'
+  },
+  {
+    _id: ObjectId('6749214126998bf6350d8192'),
+    producto: 'libro2',
+    precio: 12.99,
+    descripcion: 'Un muy buen libro',
+    detalles: { tapa: 'dura', paginas: 300 }
+tienda>
+]
+tienda>
