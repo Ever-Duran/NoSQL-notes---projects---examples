@@ -70,3 +70,18 @@ tienda> db.productos.find().pretty()
 tienda>
 ]
 tienda>
+
+
+//*******//
+//More codes from class//
+//show a DB
+use market
+show dbs
+
+//create//
+db.createCollection("clients")
+
+//delete a db//
+use example
+db.dropDatabase()
+
