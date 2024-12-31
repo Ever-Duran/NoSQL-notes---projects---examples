@@ -85,3 +85,14 @@ db.createCollection("clients")
 use example
 db.dropDatabase()
 
+cls (clean)
+
+show collection //shows collections
+
+//******
+//it creates a collection and inserts a document
+//if the collection doesn't exist, it is automatically created
+db.productos.insert(
+{ nombre: "escoba",
+}
+)
