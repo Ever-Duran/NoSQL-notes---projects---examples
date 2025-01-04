@@ -96,3 +96,20 @@ db.productos.insert(
 { nombre: "escoba",
 }
 )
+
+//to look for more than one results
+db.productos.find(
+{descripción: "circular", nombre: "galletas",}
+)
+
+//This one shows the first element that meets the condition
+db.productos.findOne(
+{descripción: "circular"}
+)
+
+
+
+
+
+
+db.
