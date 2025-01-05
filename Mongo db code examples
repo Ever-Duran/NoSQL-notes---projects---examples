@@ -102,14 +102,22 @@ db.productos.find(
 {descripción: "circular", nombre: "galletas",}
 )
 
+//*************
 //This one shows the first element that meets the condition
 db.productos.findOne(
 {descripción: "circular"}
 )
 
+//Shows the first element that
+//(we put 1 as a binary value for True but 0 is False)
+db.productos.findOne({descripción: "circular"}, {nombre: 1, descripción: 1, _id : 0})
+
+//example with find
+db.productos.find({descripción: "circular"}, {nombre: 1, precio: 1, _id: 0})
+
+//************
 
 
 
 
 
-db.
