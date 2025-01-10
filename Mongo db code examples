@@ -116,6 +116,13 @@ db.productos.findOne({descripción: "circular"}, {nombre: 1, descripción: 1, _i
 db.productos.find({descripción: "circular"}, {nombre: 1, precio: 1, _id: 0})
 
 //************
+db.productos.find().forEach(
+p => print +("Nombre del producto:" + p.nombre)
+)
+
+Nombre del producto : escoba
+Nombre del producto : jalador
+Nombre del producto : galletas
 
 
 
