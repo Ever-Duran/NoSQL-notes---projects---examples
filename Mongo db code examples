@@ -137,16 +137,26 @@ db.productos.find().forEach(p => print("Desc producto: " + p.descripcion))
 //actualizar
 
 db.producto.find({nombre: "escoba"})
+
 db.producto.update({nombre: "escoba"},
   {
-$set:{
-descripcion: "color azul",
-precio: 49.5
-}
-}
+  $set:{
+  descripcion: "color azul",
+  precio: 49.5
+  }
+  }
 )
 
+//****************
 
+db.productos.remove({nombre: "escoba"})
+Write Result({"Removed": 1})
+
+db.productos.find({nombre: "escoba"}).pretty()
+
+//***********
+//Eliminar todos los elementos
+db.productos.remo({})
 
 
 
