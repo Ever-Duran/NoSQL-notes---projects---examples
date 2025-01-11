@@ -124,6 +124,29 @@ Nombre del producto : escoba
 Nombre del producto : jalador
 Nombre del producto : galletas
 
+//*************
+db. productos.find().forEach(p => print + ("Precio: " + p.precio))
+precio: Undefined
+precio: 48.5
+precio: 14.5
+precio: 100
+
+//**********
+db.productos.find().forEach(p => print("Desc producto: " + p.descripcion))
+
+//actualizar
+
+db.producto.find({nombre: "escoba"})
+db.producto.update({nombre: "escoba"},
+  {
+$set:{
+descripcion: "color azul",
+precio: 49.5
+}
+}
+)
+
+
 
 
 
