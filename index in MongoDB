@@ -1,1 +1,18 @@
+Normal search:
+db.getCollection("empleados").find(("nombres" : "jaime"))
+
+Using the key:
+db.getCollection("empleados").find(("_id" : ObjectId("606cec37+981465")))
+
+
+We create an index to improve our researches:
+db.getCollection("empleados").createIndex((nombres:1 ))
+
+-
+db.getCollection("empleados").find(("nombres": "jaime"))
+
+Compund index:
+db.getCollection("empleados").createIndex((nombres: 1, apellidos: -1))
+
+
 
