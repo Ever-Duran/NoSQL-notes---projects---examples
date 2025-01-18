@@ -14,5 +14,11 @@ db.getCollection("empleados").find(("nombres": "jaime"))
 Compund index:
 db.getCollection("empleados").createIndex((nombres: 1, apellidos: -1))
 
+An attribute becomes unique
+db.getCollection("empleados").createIndex((experiencia:1), (unique: true))
 
+Create an index with a particular name:
+db.getCollection("empleados").createIndex((nombres:1), (name: "ix_nombres"))
 
+Delete an index:
+db.getCollection("empleados").dropIndex("ix_nombres")
